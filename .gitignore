@@ -1,0 +1,106 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+wheels/
+share/python-wheels/
+*.manifest
+*.spec
+
+# PyInstaller
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.env
+.venv
+ENV/
+env/
+venv/
+venv.bak/
+
+# Pytest cache
+.pytest_cache/
+.cache/
+.tox/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Environments and configuration
+.env
+*.env
+*.ini
+*.toml
+
+# Unit test / coverage reports
+.coverage
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# Celery beat schedule
+celerybeat-schedule
+
+# Logs and debug files
+*.log
+*.out
+*.err
+
+# Docker files
+docker-compose.override.yml
+.docker/
+*.log
+**/Dockerfile
+
+# Test data
+*.db
+*.sqlite3
+*.sqlite
+
+# System files
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# VSCode workspace settings
+.vscode/
+
+# Gitignore all output from models
+**/models/
+*.model
+models/.data/
+
+# Node modules if any frontend assets are present
+node_modules/
+
+# Temporary files and backups
+*.bak
+*.tmp
+*.backup
+
+# Coverage report and Pytest results
+htmlcov/
+pytest-coverage.xml
+junit.xml
+reports/

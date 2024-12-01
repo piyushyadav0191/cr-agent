@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+celery
+redis
+langchain-ollama
+pytest
+httpx
+pytest-asyncio

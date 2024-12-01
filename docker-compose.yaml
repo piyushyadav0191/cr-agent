@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+    fastapi:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: fastapi_app
+        command: uvicorn main:app --host 0.0.0.0 --port 8000
+        ports:
+            - "8000:8000"
+        depends_on:
+            - redis
+            - ollama
+        env_file:
+            - .env
+
+    celery:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: celery_worker
+        command: celery -A celery_app worker --pool=solo --loglevel=info
+        depends_on:
+            - redis
+            - fastapi
+            - ollama
+        env_file:
+            - .env
+
+    redis:
+        image: redis:alpine
+        container_name: redis
+        ports:
+            - "6379:6379"
+
+    ollama:
+        image: ollama/ollama
+        container_name: ollama
+        ports:
+            - "11434:11434"
